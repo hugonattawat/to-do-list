@@ -1,0 +1,105 @@
+/* .input {
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
+}
+
+.input_box {
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black;
+}
+
+.input_submit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50px;
+    right: 0px;
+    border: none;
+    font-size: 15px;
+    background-color: #2f74c0;
+    color: white;
+    transition: 0.2s all;
+    box-shadow: 0 0 10px black;
+}
+
+.input_submit:hover {
+    background-color: #388ae2;
+}
+
+.input_submit:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+} */
+
+.taskCard {
+    background: #fff;
+    /* height: 150px; */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 16px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.taskCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.taskCardHeader {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.expandIcon {
+    float: right;
+    cursor: pointer;
+}
+
+.cardTitle {
+    font-size: 18px;
+}
+
+.cardText {
+    white-space: pre-line;
+}
+
+.priorityText, .dueDateText {
+    font-size: 14px;
+}
+
+.priorityHigh {
+    background-color: #ffcccc; /* Light red */
+    padding: 4px;
+    border-radius: 4px;
+    display: inline-block;
+}
+  
+.priorityMedium {
+    background-color: #ffff99; /* Light yellow */
+    padding: 4px;
+    border-radius: 4px;
+    display: inline-block;
+}
+  
+.priorityLow {
+    background-color: #ccffcc; /* Light green */
+    padding: 4px;
+    border-radius: 4px;
+    display: inline-block;
+}

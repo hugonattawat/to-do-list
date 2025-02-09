@@ -1,0 +1,38 @@
+.listContainer {
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.list_heading {
+    font-size: 30px;
+    color: black;
+}
+
+.taskItems {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px; 
+}
+
+@media (max-width: 1100px) {
+    .taskItems {
+        width: 45%;
+    }
+}
+
+@media (max-width: 700px) {
+    .taskItems {
+      width: 95%;
+      flex-direction: column;
+    }
+
+    .listContainer {
+        width: 95%;
+        flex-direction: column;
+    }
+  }

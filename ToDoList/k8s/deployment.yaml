@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: todolist-hugo
+  name: todolist-hugo-deploy
+  namespace: hugo-ngowthammatas
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: todolist-hugo
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: todolist-hugo
+    spec:
+      containers:
+#        - args:
+#            - --config=/config/config.yaml
+#            - --loglevel=debug
+        - name: todolist-hugo
+          image: ghcr.io/thg-accelerator/2023-user-nattawat-ngowthammatas/tasklist-hugo:v6.0.5
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+        - name: ghcr-creds
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
